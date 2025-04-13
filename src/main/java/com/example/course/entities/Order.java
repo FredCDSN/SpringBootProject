@@ -126,7 +126,7 @@ public class Order implements Serializable {
 			sum += x.getSubTotal();
 		}
 		
-		return null;
+		return sum;
 		
 	}
 
