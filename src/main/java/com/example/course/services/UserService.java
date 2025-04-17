@@ -36,6 +36,9 @@ public class UserService {
 		repository.deleteById(id);
 		}catch(EmptyResultDataAccessException e){
 			throw new ResourceNotFoundException(id);
+			/*}catch(RuntimeException e ){ isso é pra ver qual excessão que da no console.
+			 * e.printStacktTrace;
+			 * } */
 		}catch(DataIntegrityViolationException e) {
 			throw new DatabaseException(e.getMessage());
 		}
